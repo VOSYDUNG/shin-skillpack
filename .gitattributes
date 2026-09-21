@@ -1,0 +1,4 @@
+# Keep skill files byte-identical to their upstream originals on every platform.
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.zip binary
