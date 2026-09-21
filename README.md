@@ -17,7 +17,7 @@ Projects, ChatGPT, Grok, Gemini, Copilot, hoặc bất kỳ model nào nhận sy
 **Claude Code / Claude Desktop** — repo này *chính là* một plugin marketplace:
 
 ```
-/plugin marketplace add <github-user>/shin-skillpack
+/plugin marketplace add VOSYDUNG/shin-skillpack
 /plugin install operations@shin-skillpack
 ```
 

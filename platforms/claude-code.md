@@ -12,7 +12,7 @@ claude
 Then inside Claude Code:
 
 ```
-/plugin marketplace add <your-github-user>/shin-skillpack
+/plugin marketplace add VOSYDUNG/shin-skillpack
 /plugin install productivity@shin-skillpack
 /plugin install product-management@shin-skillpack
 /plugin install operations@shin-skillpack
