@@ -1,0 +1,22 @@
+# Packaged archives — rebuild with tools/make_zip.ps1
+dist/
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Working files the productivity skills create in a live workspace.
+# They belong to the workspace using the pack, not to the pack itself.
+TASKS.md
+CLAUDE.md
+memory/
+dashboard.html
+!plugins/productivity/skills/dashboard.html
