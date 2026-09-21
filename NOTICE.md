@@ -2,8 +2,8 @@
 
 ## Summary
 
-All skill content in this pack was **written by Anthropic**. NNC Company packaged and
-redistributed it; NNC did not author the skills and does not claim copyright in them.
+All skill content in this pack was **written by Anthropic**. Shin (Vo Sy Dung) packaged and
+redistributed it; the packager did not author the skills and does not claim copyright in them.
 
 The three marketplace plugins ship under the **Apache License 2.0** — see [`LICENSE`](LICENSE).
 Apache-2.0 permits redistribution, including publicly and in modified form, provided the
@@ -25,7 +25,7 @@ inside the binary rather than as files; its two `SKILL.md` files are transcripti
 skill text as served, and `reference/0.2.52/*.d.ts` are the platform-served type definition
 files, copied verbatim.
 
-## Modifications made by NNC Company
+## Modifications made by the packager
 
 Stated as Apache-2.0 §4(b) requires.
 
@@ -54,7 +54,7 @@ how to obtain the mapping live instead.
 ## Attribution
 
 - Skill content: **Anthropic** — <https://github.com/anthropics/claude-code>
-- Packaging: **NNC Company**, Vientiane, Lao PDR
+- Packaging: **Shin (Vo Sy Dung)**
 - Pack version: 1.0.0 (2026-09-21)
 
 ## If you republish this

@@ -47,7 +47,7 @@ Two notes for API use:
 - **Cache the system prompt.** A bundle is 6k–30k tokens and never changes between turns. On
   the Claude API, mark it with `cache_control` and you pay for it once per cache window instead
   of once per turn.
-- **Pick the bundle, not the all-in-one.** `NNC-ALL-IN-ONE.bundle.md` is ~184 KB — it fits in
+- **Pick the bundle, not the all-in-one.** `SHIN-ALL-IN-ONE.bundle.md` is ~184 KB — it fits in
   a large context window, but routing accuracy drops and cost rises. Load the one domain the
   endpoint serves.
 

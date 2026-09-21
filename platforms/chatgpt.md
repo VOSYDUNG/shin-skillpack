@@ -3,10 +3,10 @@
 ChatGPT has no skill loader, so the pack goes in as instructions + knowledge files. Two
 routes, depending on whether you want a reusable GPT or a one-off project.
 
-## Route A — a Custom GPT (reusable, shareable inside NNC)
+## Route A — a Custom GPT (reusable, shareable with your team)
 
 1. **Create** → ChatGPT → *Explore GPTs* → *Create* → *Configure*.
-2. **Name / Description** — e.g. `NNC Ops Copilot`.
+2. **Name / Description** — e.g. `Shin Ops Copilot`.
 3. **Instructions** — paste `portable/ROUTER-ONLY.md`, then append the retrieval rule below.
    The Instructions field caps at **8,000 characters**; `ROUTER-ONLY.md` is ~6 KB, so it fits
    with room for house rules. A full bundle does **not** fit here — that is what Knowledge is for.
@@ -37,7 +37,7 @@ ChatGPT Projects take project instructions plus files. Paste one `*.bundle.md` *
 into the project instructions** if it fits the field; otherwise paste `ROUTER-ONLY.md` there
 and attach the bundles as project files. Same retrieval rule applies.
 
-Route B is the better fit when only you use it. Route A is better when several NCIANS should
+Route B is the better fit when only you use it. Route A is better when several teammates should
 get the same behavior.
 
 ## What to expect

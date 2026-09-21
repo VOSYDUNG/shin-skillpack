@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Package the skill pack into dist/nnc-skillpack-<version>-<date>.zip
+    Package the skill pack into dist/shin-skillpack-<version>-<date>.zip
 
 .DESCRIPTION
     Rebuilds portable/ from plugins/, regenerates SHA256SUMS.txt, then zips
@@ -42,7 +42,7 @@ try {
 
     # --- stage and zip ---------------------------------------------------
     $stamp   = Get-Date -Format 'yyyy-MM-dd'
-    $name    = "nnc-skillpack-$Version-$stamp"
+    $name    = "shin-skillpack-$Version-$stamp"
     $distDir = Join-Path $root 'dist'
     $staging = Join-Path $distDir $name
     $zipPath = Join-Path $distDir "$name.zip"

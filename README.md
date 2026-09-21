@@ -1,6 +1,6 @@
-# NNC Skill Pack
+# Shin Skill Pack
 
-Bộ skill của NNC, đóng gói một lần — nạp được vào Claude Code, Claude Desktop, claude.ai
+Bộ skill đóng gói một lần — nạp được vào Claude Code, Claude Desktop, claude.ai
 Projects, ChatGPT, Grok, Gemini, Copilot, hoặc bất kỳ model nào nhận system prompt.
 
 **23 skill, 4 nhóm.**
@@ -17,8 +17,8 @@ Projects, ChatGPT, Grok, Gemini, Copilot, hoặc bất kỳ model nào nhận sy
 **Claude Code / Claude Desktop** — repo này *chính là* một plugin marketplace:
 
 ```
-/plugin marketplace add <github-user>/nnc-skillpack
-/plugin install operations@nnc-skillpack
+/plugin marketplace add <github-user>/shin-skillpack
+/plugin install operations@shin-skillpack
 ```
 
 **ChatGPT / Grok / Gemini** — dán file đã dẹt sẵn trong `portable/`:
@@ -33,7 +33,7 @@ Chi tiết từng nền tảng: [`platforms/`](platforms/).
 ## Cấu trúc
 
 ```
-nnc-skillpack/
+shin-skillpack/
 ├── .claude-plugin/marketplace.json   ← biến repo thành marketplace của Claude Code
 ├── plugins/                          ← NGUỒN. Sửa ở đây.
 │   ├── productivity/                 (v1.3.1 · 4 skill · dashboard.html)
@@ -46,11 +46,11 @@ nnc-skillpack/
 │   ├── product-management.bundle.md  (~111 KB)
 │   ├── operations.bundle.md          (~27 KB)
 │   ├── artifact-toolkit.bundle.md    (~22 KB)
-│   └── NNC-ALL-IN-ONE.bundle.md      (~184 KB)
+│   └── SHIN-ALL-IN-ONE.bundle.md      (~184 KB)
 ├── platforms/                        ← hướng dẫn nạp cho từng nền tảng
 ├── tools/
 │   ├── build_portable.py             ← dựng lại portable/ từ plugins/
-│   └── make_zip.ps1                  ← đóng gói dist/nnc-skillpack-<ngày>.zip
+│   └── make_zip.ps1                  ← đóng gói dist/shin-skillpack-<ngày>.zip
 └── dist/                             ← file zip (không commit)
 ```
 
@@ -80,9 +80,9 @@ Chạy được trên Windows PowerShell 5.1 lẫn PowerShell 7. Script build l�
 ## Điều nên biết trước khi dùng
 
 **Skill là quy trình, không phải dữ liệu.** Chúng nói cách viết một PRD, cách chấm rủi ro,
-cách bố cục một status report. Chúng **không** biết gì về NNC: không biết ba kênh OTC / HC /
-SPM, không biết quy tắc "số liệu của NNC chứ không phải cả tập đoàn", không biết yêu cầu song
-ngữ Việt–Lào. Nạp bối cảnh NNC **song song** với bộ này, đừng thay thế.
+cách bố cục một status report. Chúng **không** biết gì về tổ chức của bạn: không biết cơ cấu kênh,
+không biết quy tắc phạm vi số liệu, không biết yêu cầu ngôn ngữ. Nạp bối cảnh tổ chức
+**song song** với bộ này, đừng thay thế.
 
 **Placeholder `~~`.** Các skill cố ý không gắn với sản phẩm cụ thể: `~~project tracker` nghĩa
 là Asana, Jira, Linear — cái nào bạn nối thì là cái đó. Trên nền tảng không có connector, skill

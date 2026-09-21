@@ -1,11 +1,11 @@
 {
-  "name": "nnc-skillpack",
+  "name": "shin-skillpack",
   "owner": {
-    "name": "NNC Company",
+    "name": "Shin (Vo Sy Dung)",
     "email": "dung.vo@nnclaogroup.com"
   },
   "metadata": {
-    "description": "NNC's portable skill pack — Productivity, Product Management, Operations and the Artifact Toolkit, packaged to load into Claude Code, Claude Desktop, claude.ai Projects, ChatGPT, Grok or any assistant that accepts a system prompt.",
+    "description": "Shin's portable skill pack — Productivity, Product Management, Operations and the Artifact Toolkit, packaged to load into Claude Code, Claude Desktop, claude.ai Projects, ChatGPT, Grok or any assistant that accepts a system prompt.",
     "version": "1.0.0"
   },
   "plugins": [
@@ -41,7 +41,7 @@
       "source": "./plugins/artifact-toolkit",
       "version": "0.2.52",
       "description": "Artifact authoring know-how: runtime capabilities a published page can declare (with the full 0.2.52 type definitions) and the diagramming rules for drawing a mechanism instead of decorating a page.",
-      "author": { "name": "Anthropic (skill content) — packaged by NNC Company" },
+      "author": { "name": "Anthropic (skill content) — packaged by Shin" },
       "category": "development",
       "keywords": ["artifacts", "svg", "diagram", "capabilities", "window.claude"]
     }

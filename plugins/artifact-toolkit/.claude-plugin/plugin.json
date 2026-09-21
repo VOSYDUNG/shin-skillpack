@@ -3,7 +3,7 @@
   "version": "0.2.52+snap.2026-09-21",
   "description": "Artifact authoring know-how: the runtime capabilities a published Artifact page can declare (artifact, db, room, user, sample, mcp, assets, comments, downloads, permissions) with the full 0.2.52 type definitions, and the diagramming rules for drawing a mechanism instead of decorating a page.",
   "author": {
-    "name": "Anthropic (skill content) — packaged by NNC Company"
+    "name": "Anthropic (skill content) — packaged by Shin"
   },
   "homepage": "https://docs.claude.com/en/docs/claude-code/plugins"
 }

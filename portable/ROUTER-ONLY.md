@@ -1,4 +1,4 @@
-# NNC Skill Pack — router only
+# Shin Skill Pack — router only
 
 For platforms with a tight instruction budget. This file lists every skill and what it
 does, but not the procedures. Paste it as the standing instruction, then paste the one

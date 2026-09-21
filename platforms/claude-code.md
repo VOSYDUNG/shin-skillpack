@@ -12,20 +12,20 @@ claude
 Then inside Claude Code:
 
 ```
-/plugin marketplace add <your-github-user>/nnc-skillpack
-/plugin install productivity@nnc-skillpack
-/plugin install product-management@nnc-skillpack
-/plugin install operations@nnc-skillpack
-/plugin install artifact-toolkit@nnc-skillpack
+/plugin marketplace add <your-github-user>/shin-skillpack
+/plugin install productivity@shin-skillpack
+/plugin install product-management@shin-skillpack
+/plugin install operations@shin-skillpack
+/plugin install artifact-toolkit@shin-skillpack
 ```
 
-Update later with `/plugin marketplace update nnc-skillpack`.
+Update later with `/plugin marketplace update shin-skillpack`.
 
 ## 2. From a local clone or the unzipped folder
 
 ```
-/plugin marketplace add D:/WORK/NNC-company/nnc-skillpack
-/plugin install operations@nnc-skillpack
+/plugin marketplace add D:/path/to/shin-skillpack
+/plugin install operations@shin-skillpack
 ```
 
 Use a forward-slash path on Windows; a local marketplace points at the folder containing

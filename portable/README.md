@@ -16,7 +16,7 @@ python tools/build_portable.py
 | `product-management.bundle.md` | ~111 KB | ” |
 | `operations.bundle.md` | ~27 KB | ” |
 | `artifact-toolkit.bundle.md` | ~22 KB | ” (see the portability caveat below) |
-| `NNC-ALL-IN-ONE.bundle.md` | ~184 KB | A knowledge file or Project doc where the whole pack should be available at once. Too large for most "instructions" fields. |
+| `SHIN-ALL-IN-ONE.bundle.md` | ~184 KB | A knowledge file or Project doc where the whole pack should be available at once. Too large for most "instructions" fields. |
 
 ## The two patterns
 
