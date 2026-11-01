@@ -4,11 +4,15 @@ For platforms with a tight instruction budget. This file lists every skill and w
 does, but not the procedures. Paste it as the standing instruction, then paste the one
 relevant `*.bundle.md` section into the chat when you actually run a skill.
 
+Treat the methods as adaptable references. Preserve the user's intent, acceptance
+criteria and evidence; distinguish plans from actuals and revise methods from real use.
+
 ## Productivity
 
 | Command | Use it when |
 |---|---|
 | `/memory-management` | Two-tier memory system that makes Claude a true workplace collaborator. Decodes shorthand, acronyms, nicknames, and internal language so Claude understands requests like a colleague would. CLAUDE.md for working memory, memory/ directory… |
+| `/outcome-work-management` | Shape goals from problems and opportunities, choose suitable discovery or planning methods, and connect OKRs to period plans, practical checklists and actual outputs. Use for goal formation, work planning and evidence-based reviews. |
 | `/start` | Initialize the productivity system and open the dashboard. Use when setting up the plugin for the first time, bootstrapping working memory from your existing task list, or decoding the shorthand (nicknames, acronyms, project codenames)… |
 | `/task-management` | Simple task management using a shared TASKS.md file. Reference this when the user asks about their tasks, wants to add/complete tasks, or needs help tracking commitments. |
 | `/update` | Sync tasks and refresh memory from your current activity. Use when pulling new assignments from your project tracker into TASKS.md, triaging stale or overdue tasks, filling memory gaps for unknown people or projects, or running a… |

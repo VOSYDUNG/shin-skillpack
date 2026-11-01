@@ -8,8 +8,8 @@ routes, depending on whether you want a reusable GPT or a one-off project.
 1. **Create** → ChatGPT → *Explore GPTs* → *Create* → *Configure*.
 2. **Name / Description** — e.g. `Shin Ops Copilot`.
 3. **Instructions** — paste `portable/ROUTER-ONLY.md`, then append the retrieval rule below.
-   The Instructions field caps at **8,000 characters**; `ROUTER-ONLY.md` is ~6 KB, so it fits
-   with room for house rules. A full bundle does **not** fit here — that is what Knowledge is for.
+   Check the current field budget and the router's character count after rebuilding;
+   leave room for the retrieval rule below. Put full bundles in Knowledge.
 4. **Knowledge** — upload the bundles you want that GPT to have:
    - `portable/operations.bundle.md`
    - `portable/product-management.bundle.md`
@@ -26,9 +26,10 @@ Append this to the Instructions so retrieval actually fires:
 ```
 When a request matches a skill in the routing table above, open the matching
 *.bundle.md knowledge file, locate that skill's "## Skill: /<name>" section, and
-follow it verbatim — including its output template — before answering. Do not
-paraphrase the template away. If the skill needs a figure, an owner or a date you
-do not have, ask for it instead of inventing one.
+adapt it to the user's goal, context and available evidence. Preserve acceptance
+criteria; separate plans, actuals and unknowns. Use the template when it helps the
+deliverable. Ask for missing figures, owners or dates only when needed to decide;
+never invent them. Revise the method when actual use shows a better approach.
 ```
 
 ## Route B — a Project (faster, per-workspace)

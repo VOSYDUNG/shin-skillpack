@@ -8,6 +8,12 @@ user-invocable: false
 
 Tasks are tracked in a simple `TASKS.md` file that both you and the user can edit.
 
+For OKRs, linked period plans, recurring patterns, experiments or reviews of actual
+outputs, use `outcome-work-management` first. If that workspace already has canonical
+work records, preserve their IDs, acceptance rules and evidence links; use TASKS.md only as
+a linked view if useful. Do not create a competing task store or silently migrate it.
+The simple defaults below apply when no such structure exists.
+
 ## File Location
 
 **Always use `TASKS.md` in the current working directory.**
@@ -63,10 +69,12 @@ Task format:
 
 **When user says "done with X" / "finished X":**
 - Find the task
-- Change `[ ]` to `[x]`
-- Add strikethrough: `~~task~~`
-- Add completion date
-- Move to Done section
+- For work with a defined acceptance condition, record the user's report and assess
+  it against that condition. Use awaiting-verification when required evidence is
+  absent; a routine personal task can accept self-report as its evidence.
+- Only when that acceptance is satisfied (or the simple task uses self-report):
+  change `[ ]` to `[x]`, add strikethrough `~~task~~` and the completion date,
+  then move to Done. Otherwise retain the open task with its evidence gap.
 
 **When user asks "what am I waiting on":**
 - Read the Waiting On section
@@ -79,7 +87,8 @@ Task format:
 - Include "due [date]" for deadlines
 - Include "since [date]" for waiting items
 - Sub-bullets for additional context
-- Keep Done section for ~1 week, then clear old items
+- Keep recent Done items visible. Archive older items with IDs, dates and evidence
+  preserved; do not delete the history to tidy the board.
 
 ## Extracting Tasks
 

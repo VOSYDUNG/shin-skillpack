@@ -13,7 +13,7 @@
 [CmdletBinding()]
 param(
     [switch]$SkipBuild,
-    [string]$Version = '1.0.0'
+    [string]$Version = '1.1.0-draft.1'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -53,8 +53,8 @@ try {
     New-Item -ItemType Directory -Path $staging | Out-Null
 
     Write-Host 'Staging...' -ForegroundColor Cyan
-    foreach ($item in '.claude-plugin', 'plugins', 'portable', 'platforms', 'tools',
-                      'README.md', 'NOTICE.md', 'LICENSE', 'SHA256SUMS.txt', '.gitignore') {
+    foreach ($item in '.claude-plugin', 'plugins', 'portable', 'platforms', 'tools', 'codex', 'tests',
+                      'README.md', 'WORK-MANAGEMENT.md', 'NOTICE.md', 'LICENSE', 'SHA256SUMS.txt', '.gitignore') {
         $src = Join-Path $root $item
         if (Test-Path $src) {
             Copy-Item -Recurse -Force $src -Destination (Join-Path $staging $item)

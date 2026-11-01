@@ -9,6 +9,11 @@ description: Initialize the productivity system and open the dashboard. Use when
 
 Initialize the task and memory systems, then open the unified dashboard.
 
+For a request to connect goals, period plans, routines and actual outputs, start with
+`outcome-work-management`. Reuse existing work records before creating TASKS.md.
+The dashboard below supports a simple task board; it does not implement the linked
+OKR, plan, work-pattern or evidence views. Do not claim those features are installed.
+
 ## Instructions
 
 ### 1. Check What Exists

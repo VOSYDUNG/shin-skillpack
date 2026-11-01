@@ -6,15 +6,15 @@
   },
   "metadata": {
     "description": "Shin's portable skill pack — Productivity, Product Management, Operations and the Artifact Toolkit, packaged to load into Claude Code, Claude Desktop, claude.ai Projects, ChatGPT, Grok or any assistant that accepts a system prompt.",
-    "version": "1.0.0"
+    "version": "1.1.0-draft.1"
   },
   "plugins": [
     {
       "name": "productivity",
       "source": "./plugins/productivity",
-      "version": "1.3.1",
-      "description": "Manage tasks, plan your day, and build up memory of important context about your work. Syncs with your calendar, email, and chat to keep everything organized and on track.",
-      "author": { "name": "Anthropic" },
+      "version": "1.4.0-draft.1",
+      "description": "Connect OKRs and plans to actual outputs and evidence, manage tasks, and retain workplace context. Includes Shin's draft outcome-work-management method.",
+      "author": { "name": "Anthropic (original) / Shin (adaptations)" },
       "category": "productivity",
       "keywords": ["tasks", "memory", "planning", "dashboard"]
     },

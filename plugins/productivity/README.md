@@ -23,6 +23,7 @@ This plugin gives Claude a persistent understanding of your work:
 | `/start` | Initialize tasks + memory, open the dashboard |
 | `/update` | Triage stale items, check memory for gaps, sync from external tools if applicable |
 | `/update --comprehensive` | Deep scan email, calendar, chat — flag missed todos and suggest new memories |
+| `/outcome-work-management` | Connect OKRs, period plans, recurring patterns, actual outputs and evidence; adapt the method from real use |
 
 ## Skills
 
@@ -30,6 +31,12 @@ This plugin gives Claude a persistent understanding of your work:
 |-------|-------------|
 | `memory-management` | Two-tier memory system — CLAUDE.md for working memory, memory/ directory for deep storage |
 | `task-management` | Markdown-based task tracking using a shared TASKS.md file |
+| `outcome-work-management` | Shin's draft method for company work, finance, personal routines and exploration; source plans and execution history remain in the user's workspace |
+
+The added method is a current working method for evaluation. The existing dashboard is still a
+simple task/memory board, not an OKR or evidence-management application. See the pack's
+`WORK-MANAGEMENT.md` for rationale and illustrative cases. Adapt templates to context;
+the upstream workflows are references, not a requirement to follow every step blindly.
 
 ## Example Workflows
 

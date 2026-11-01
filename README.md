@@ -3,11 +3,23 @@
 Bộ skill đóng gói một lần — nạp được vào Claude Code, Claude Desktop, claude.ai
 Projects, ChatGPT, Grok, Gemini, Copilot, hoặc bất kỳ model nào nhận system prompt.
 
-**23 skill, 4 nhóm.**
+**24 skill tham khảo, 4 nhóm.** Gói Codex `shin-agentic-work` chọn 11 skill, gồm phương
+thức kết quả, cầu nối NNC OSER R2 và các phương pháp chuyên môn cần thiết.
+
+**Codex dùng trước:** xem [cách cài và sử dụng](platforms/codex.md).
+Build bằng `python tools/build_codex_plugin.py`; ZIP nằm ở `dist/shin-agentic-work.zip`.
+Điểm vào `shin-agentic-work` giữ ROOT gọn, giao agent theo sự kiện và cập nhật một
+báo cáo hiện hành. Dữ liệu dự án và hồ sơ agent không đi vào package.
+
+Định hướng: [Làm việc có trật tự để tạo kết quả thật](WORK-MANAGEMENT.md).
+Skill mới `outcome-work-management` hướng dẫn hình thành mục tiêu, chọn phương pháp
+theo câu hỏi và đầu ra cần có, rồi nối OKR quý, kế hoạch tháng/tuần/ngày,
+mẫu việc tổng quát và checklist của từng lần thực hiện. Quy trình được tham khảo,
+điều chỉnh và kiểm chứng qua sử dụng; không mặc định đúng chỉ vì đã được đóng gói.
 
 | Nhóm | Skill | Làm được gì |
 |---|---|---|
-| **Productivity** | 4 | Quản lý việc trong `TASKS.md`, dựng bộ nhớ hai tầng về người/dự án/thuật ngữ nội bộ, đồng bộ việc từ project tracker, dashboard HTML. |
+| **Productivity** | 5 | Nối mục tiêu với kế hoạch và kết quả thực tế; quản lý task, bộ nhớ, đồng bộ từ tracker và dashboard task đơn giản. |
 | **Product Management** | 8 | Viết PRD/spec, cập nhật roadmap, lập kế hoạch sprint, tổng hợp user research, brief đối thủ, review chỉ số, cập nhật stakeholder. |
 | **Operations** | 9 | Báo cáo tình hình, SOP & sơ đồ quy trình, runbook vận hành, đánh giá rủi ro, review nhà cung cấp, change request, kế hoạch năng lực, theo dõi tuân thủ, tối ưu quy trình. |
 | **Artifact Toolkit** | 2 | Runtime capabilities của Artifact (kèm 12 file `.d.ts` bản 0.2.52) và quy tắc vẽ sơ đồ SVG. |
@@ -36,21 +48,22 @@ Chi tiết từng nền tảng: [`platforms/`](platforms/).
 shin-skillpack/
 ├── .claude-plugin/marketplace.json   ← biến repo thành marketplace của Claude Code
 ├── plugins/                          ← NGUỒN. Sửa ở đây.
-│   ├── productivity/                 (v1.3.1 · 4 skill · dashboard.html)
+│   ├── productivity/                 (gốc v1.3.1 + bản chưng cất · 5 skill · dashboard.html)
 │   ├── product-management/           (v1.2.0 · 8 skill · 1 command)
 │   ├── operations/                   (v1.3.0 · 9 skill)
 │   └── artifact-toolkit/             (contract 0.2.52 · 2 skill · 12 .d.ts)
 ├── portable/                         ← SINH RA. Đừng sửa tay.
-│   ├── ROUTER-ONLY.md                (~6 KB — bảng định tuyến, không kèm quy trình)
-│   ├── productivity.bundle.md        (~24 KB)
-│   ├── product-management.bundle.md  (~111 KB)
-│   ├── operations.bundle.md          (~27 KB)
-│   ├── artifact-toolkit.bundle.md    (~22 KB)
-│   └── SHIN-ALL-IN-ONE.bundle.md      (~184 KB)
+│   ├── ROUTER-ONLY.md                (bảng định tuyến, không kèm quy trình)
+│   ├── productivity.bundle.md
+│   ├── product-management.bundle.md
+│   ├── operations.bundle.md
+│   ├── artifact-toolkit.bundle.md
+│   └── SHIN-ALL-IN-ONE.bundle.md
 ├── platforms/                        ← hướng dẫn nạp cho từng nền tảng
 ├── tools/
 │   ├── build_portable.py             ← dựng lại portable/ từ plugins/
 │   └── make_zip.ps1                  ← đóng gói dist/shin-skillpack-<ngày>.zip
+├── WORK-MANAGEMENT.md                ← thiết kế bản chưng cất và ví dụ
 └── dist/                             ← file zip (không commit)
 ```
 
@@ -60,7 +73,7 @@ Mỗi plugin giữ nguyên cấu trúc chuẩn của Claude Code:
 
 ## Quy trình sửa đổi
 
-Chỉ sửa trong `plugins/`, rồi dựng lại:
+Sửa nguồn skill trong `plugins/` (chính sách đóng gói ở `tools/build_portable.py`), rồi dựng lại:
 
 ```bash
 python tools/build_portable.py
@@ -102,6 +115,8 @@ xem [`PORTABILITY.md`](plugins/artifact-toolkit/skills/artifact-capabilities/POR
 
 ## Nguồn gốc & giấy phép
 
-Xem [`NOTICE.md`](NOTICE.md). Tóm tắt: nội dung skill do Anthropic viết, phát hành theo
-Apache-2.0; bộ này đóng gói lại, không sửa nội dung skill. Ảnh chụp ngày 2026-09-21 từ
-marketplace `knowledge-work-plugins` và Claude Code 2.1.275.
+Xem [`NOTICE.md`](NOTICE.md). Bộ gốc gồm các skill của Anthropic, ảnh chụp ngày
+2026-09-21 từ marketplace `knowledge-work-plugins` và Claude Code 2.1.275.
+Bản này bổ sung phương thức quản lý kết quả theo yêu cầu của Shin và điều chỉnh
+các điểm tích hợp Productivity cùng chính sách bundle. Nguồn gốc và thay đổi
+được ghi riêng; bản bổ sung chưa được chứng minh qua vận hành thực tế.

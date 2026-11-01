@@ -10,6 +10,12 @@ argument-hint: "[--comprehensive]"
 
 Keep your task list and memory current. Two modes:
 
+When the workspace uses `outcome-work-management`, preserve canonical IDs and evidence
+links, and update its single current brief coherently. Match imported work by stable source ID/URL
+first; title similarity is only a candidate match to inspect. External completion is
+a reported status, not automatic acceptance of a local KR or deliverable. Record
+the update at the level supported by its evidence; keep forecasts separate from actuals.
+
 - **Default:** Sync tasks from external tools, triage stale items, check memory for gaps
 - **`--comprehensive`:** Deep scan chat, email, calendar, docs — flag missed todos and suggest new memories
 
@@ -39,7 +45,7 @@ If no sources are available, skip to Step 3.
 | External task | TASKS.md match? | Action |
 |---------------|-----------------|--------|
 | Found, not in TASKS.md | No match | Offer to add |
-| Found, already in TASKS.md | Match by title (fuzzy) | Skip |
+| Found, already in TASKS.md | Match by source ID/URL; inspect fuzzy title candidates | Reconcile existing record; avoid duplicates |
 | In TASKS.md, not in external | No match | Flag as potentially stale |
 | Completed externally | In Active section | Offer to mark done |
 
@@ -163,6 +169,6 @@ Present grouped by confidence. High-confidence items offered to add directly; lo
 
 - Never auto-add tasks or memories without user confirmation
 - External source links are preserved when available
-- Fuzzy matching on task titles handles minor wording differences
+- Prefer source IDs/URLs; fuzzy title matching suggests candidates, not confirmed identity
 - Safe to run frequently — only updates when there's new info
 - `--comprehensive` always runs interactively

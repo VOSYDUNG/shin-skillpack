@@ -1,0 +1,18 @@
+{
+  "name": "shin-agentic-work",
+  "version": "0.1.0",
+  "description": "Shape outcomes, choose methods, delegate bounded work through native subagents under NNC OSER R2, and verify results through one current ROOT brief.",
+  "author": {
+    "name": "Shin"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Shin Agentic Work",
+    "shortDescription": "Goals, native delegation and one current ROOT brief.",
+    "longDescription": "Outcome planning with the NNC OSER R2 method, bounded native delegation, evidence-based verification and clean current documentation.",
+    "developerName": "Shin",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Use Shin Agentic Work to read this project's key documents, choose the next outcome and method, delegate bounded work, and update the current ROOT brief with verified evidence."
+  }
+}

@@ -11,12 +11,12 @@ python tools/build_portable.py
 
 | File | Size | Paste it where |
 |---|---|---|
-| `ROUTER-ONLY.md` | ~6 KB | A standing instruction field with a tight budget (ChatGPT Custom GPT "Instructions", Grok custom instructions, a system prompt). Lists every skill and when to use it, but not the procedures. |
-| `productivity.bundle.md` | ~24 KB | One domain at a time — a Project, a Custom GPT knowledge file, or straight into a chat. |
+| `ROUTER-ONLY.md` | ~7 KB | A standing instruction field with a tight budget (ChatGPT Custom GPT "Instructions", Grok custom instructions, a system prompt). Lists every skill and when to use it, but not the procedures. |
+| `productivity.bundle.md` | Build reports current size | One domain at a time — a Project, a Custom GPT knowledge file, or straight into a chat. |
 | `product-management.bundle.md` | ~111 KB | ” |
 | `operations.bundle.md` | ~27 KB | ” |
 | `artifact-toolkit.bundle.md` | ~22 KB | ” (see the portability caveat below) |
-| `SHIN-ALL-IN-ONE.bundle.md` | ~184 KB | A knowledge file or Project doc where the whole pack should be available at once. Too large for most "instructions" fields. |
+| `SHIN-ALL-IN-ONE.bundle.md` | Build reports current size | A knowledge file or Project doc where the whole pack should be available at once. Too large for most "instructions" fields. |
 
 ## The two patterns
 
@@ -30,8 +30,9 @@ the instructions and upload the `*.bundle.md` files as knowledge/retrieval files
 to the instructions so retrieval actually fires:
 
 > When a request matches a skill in the routing table, open the matching `*.bundle.md`
-> knowledge file, find that skill's `## Skill:` section, and follow it verbatim — including
-> its output template — before answering.
+> knowledge file and find that skill's `## Skill:` section. Adapt the method to the actual
+> goal and available evidence. Preserve acceptance criteria and separate plans from actuals;
+> use the template only to the extent it helps the requested decision or deliverable.
 
 Pattern B is more fragile (retrieval can miss), so prefer Pattern A when the budget allows.
 

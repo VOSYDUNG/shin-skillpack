@@ -1,8 +1,8 @@
 {
   "name": "productivity",
-  "version": "1.3.1",
-  "description": "Manage tasks, plan your day, and build up memory of important context about your work. Syncs with your calendar, email, and chat to keep everything organized and on track.",
+  "version": "1.4.0-draft.1",
+  "description": "Connect OKRs and plans to actual outputs and evidence, manage tasks, and retain workplace context. Includes Shin's draft outcome-work-management method.",
   "author": {
-    "name": "Anthropic"
+    "name": "Anthropic (original) / Shin (adaptations)"
   }
 }
