@@ -13,6 +13,7 @@ criteria and evidence; distinguish plans from actuals and revise methods from re
 |---|---|
 | `/memory-management` | Two-tier memory system that makes Claude a true workplace collaborator. Decodes shorthand, acronyms, nicknames, and internal language so Claude understands requests like a colleague would. CLAUDE.md for working memory, memory/ directory… |
 | `/outcome-work-management` | Shape goals from problems and opportunities, choose suitable discovery or planning methods, and connect OKRs to period plans, practical checklists and actual outputs. Use for goal formation, work planning and evidence-based reviews. |
+| `/qa-qc-mission` | Run QA/QC sơ bộ — the early verification phase that forms a Mission's common rules before Mission lock. Produces outcome acceptance criteria with required evidence kinds (compatible with the OSER `oser init` acceptance contract),… |
 | `/start` | Initialize the productivity system and open the dashboard. Use when setting up the plugin for the first time, bootstrapping working memory from your existing task list, or decoding the shorthand (nicknames, acronyms, project codenames)… |
 | `/task-management` | Simple task management using a shared TASKS.md file. Reference this when the user asks about their tasks, wants to add/complete tasks, or needs help tracking commitments. |
 | `/update` | Sync tasks and refresh memory from your current activity. Use when pulling new assignments from your project tracker into TASKS.md, triaging stale or overdue tasks, filling memory gaps for unknown people or projects, or running a… |

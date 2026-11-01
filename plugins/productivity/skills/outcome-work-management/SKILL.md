@@ -213,6 +213,7 @@ product decision, sprint planning for a team allocation, a runbook for repeat op
 No specialist skill, dashboard, automation, agent team or external connector is required
 merely to plan a day. Creating a cadence does not schedule autonomous future runs.
 
-When the user chooses an agentic workflow, use the bundled `shin-agentic-work` entry
-and `nnc-ai-oser` allocation method: ROOT selects outcomes and verifies narrow handoffs;
-workers perform independent bounded packages with the appropriate model and context.
+Handoff: forming a Mission to build or solve something → OSER
+[mission-formation](https://github.com/VOSYDUNG/nnc-claude-plugins/blob/main/plugins/nnc/skills/mission-formation/SKILL.md)
+plus [qa-qc-mission](../qa-qc-mission/SKILL.md); once a Mission exists → this skill for
+plans, checklists and reviews. When work is executed by agents, use `shin-agentic-work`.

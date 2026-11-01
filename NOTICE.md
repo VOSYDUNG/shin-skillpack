@@ -46,6 +46,10 @@ skill bodies and supporting files were copied without modification as described 
   On 2026-11-01 that copy was replaced by a thin bridge to the current NNC OSER R2
   method; the fixed-team generator (`team.py`), role catalogue and team schema were
   removed in favour of the host's native delegation.
+- On 2026-11-01 the pack was repositioned as agentic work skills for agents: governance
+  text restating NNC OSER was replaced by links, `shin-agentic-work` gained a
+  cross-session agent activation protocol, and `plugins/productivity/skills/qa-qc-mission/`
+  (early Mission verification) was added and included in the Codex package.
 - Codex packaging normalizes copied skill frontmatter by removing Claude-only keys
   and rewrites connector-document links to resources inside the package. It includes
   no configured MCP servers, account connectors or private project records.

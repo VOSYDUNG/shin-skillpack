@@ -32,6 +32,7 @@ This plugin gives Claude a persistent understanding of your work:
 | `memory-management` | Two-tier memory system — CLAUDE.md for working memory, memory/ directory for deep storage |
 | `task-management` | Markdown-based task tracking using a shared TASKS.md file |
 | `outcome-work-management` | Shin's draft method for company work, finance, personal routines and exploration; source plans and execution history remain in the user's workspace |
+| `qa-qc-mission` | QA/QC sơ bộ before Mission lock: outcome acceptance with required evidence kinds, invariants, QC checks/evaluators and unknowns; the gate itself lives in NNC OSER mission-formation |
 
 The added method is a current working method for evaluation. The existing dashboard is still a
 simple task/memory board, not an OKR or evidence-management application. See the pack's

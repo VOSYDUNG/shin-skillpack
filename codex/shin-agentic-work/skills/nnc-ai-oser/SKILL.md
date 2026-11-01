@@ -1,57 +1,32 @@
 ---
 name: nnc-ai-oser
-description: Áp phương pháp NNC OSER R2 trên Codex — thành lập Mission (mission-formation), xúc tiến kết quả (adaptive-delivery) và kernel ai-oser cho trạng thái, quyền, bằng chứng, checkpoint. Dùng khi người dùng nhắc NNC OSER/AI OSer, cần giữ Mission bền qua nhiều phiên hoặc phối hợp nhiều luồng việc. Không dựng đội, vai, model hay trần luồng cố định; Codex tự chọn làm trực tiếp hay subagent native.
+description: Con trỏ ngắn tới NNC OSER trên Codex — dùng khi người dùng nhắc NNC OSER/AI OSer, cần thành lập Mission, xúc tiến kết quả hoặc giữ Mission, quyền, bằng chứng bền qua nhiều phiên. Phương pháp nằm ở nguồn NNC OSER; skill này chỉ chỉ đường và ghi chú cài/MCP riêng của Codex.
 ---
 
-# NNC OSER R2 trên Codex
+# NNC OSER trên Codex — con trỏ
 
-Skill này là cầu nối mỏng tới phương pháp NNC OSER R2, không phải bản sao và không phải
-bộ sinh đội. Nguồn chuẩn là [NNC OSER](https://github.com/VOSYDUNG/nnc-claude-plugins);
-xem [nguồn và lý do thay thế](references/provenance.md). Khi nội dung ở đây khác nguồn
-chuẩn, nguồn chuẩn thắng.
+Phương pháp, Mission, quyền, bằng chứng, delegation native và điều phối theo sự kiện
+nằm ở [NNC OSER](https://github.com/VOSYDUNG/nnc-claude-plugins). Đọc tại nguồn; skill
+này không chép lại. Khi khác nguồn, nguồn thắng. Xem [nguồn và lịch sử thay thế](references/provenance.md).
 
-## Chọn đúng phần của phương pháp
+| Cần | Đọc |
+|---|---|
+| Tuyên bố chung, cổng `MISSION_READY` | [docs/DECLARATION.md](https://github.com/VOSYDUNG/nnc-claude-plugins/blob/main/docs/DECLARATION.md) |
+| Thành lập Mission (Workflow A) | [mission-formation](https://github.com/VOSYDUNG/nnc-claude-plugins/blob/main/plugins/nnc/skills/mission-formation/SKILL.md) + [qa-qc-mission](../qa-qc-mission/SKILL.md) |
+| Xúc tiến kết quả (Workflow B) | [adaptive-delivery](https://github.com/VOSYDUNG/nnc-claude-plugins/blob/main/plugins/nnc/skills/adaptive-delivery/SKILL.md) |
+| Kernel: trạng thái, quyền, bằng chứng | [ai-oser](https://github.com/VOSYDUNG/nnc-claude-plugins/blob/main/plugins/nnc/skills/ai-oser/SKILL.md) |
+| Thực thi việc như một agent | [shin-agentic-work](../shin-agentic-work/SKILL.md) |
 
-- **Thành lập — `mission-formation`**: người dùng mới có ý tưởng mơ hồ, chưa rõ nên
-  cấu hình, mua, tích hợp, tái dùng hay tự xây. Làm rõ việc thật → hiện trạng → tìm
-  giải pháp có sẵn trước khi tự xây → thẻ quyết định → bản nháp Mission có thẩm quyền
-  và tiêu chí nghiệm thu. Đề xuất không phải phê duyệt.
-- **Xúc tiến — `adaptive-delivery`**: Mission đã rõ hoặc đã duyệt; cần xây, cấu hình,
-  thử, phát hành, vận hành hay sửa. Chỉ chọn những cổng mà sản phẩm thật cần; nghiệm
-  thu theo kết quả, không theo số task. Thay đổi hành vi hoặc acceptance đã duyệt là
-  một Delta Mission rõ ràng.
-- **Kernel — `ai-oser`**: khi cần trạng thái Mission bền, nguồn thẩm quyền, bằng chứng,
-  checkpoint, Health/usage hoặc admission năng lực. Trên máy có NNC OSER, đọc Mission
-  bằng `oser status --json` (hoặc công cụ MCP `oser_mission_read` nếu đã cấu hình theo
-  tài liệu tích hợp Codex của OSER). Kernel ghi Mission, tham chiếu thực thi và biên
-  nhận; nó không cấp quyền và không thay host điều phối agent.
+## Ghi chú riêng Codex
 
-Không có công cụ OSER trên máy thì vẫn áp phương pháp, nhưng nói rõ trạng thái Mission
-chưa được ghi bền; không giả vờ đã có checkpoint.
-
-## Thực thi bằng khả năng native của Codex
-
-- Codex tự chọn làm trực tiếp, dùng tool, giao subagent hay chạy song song theo công
-  việc và quyền đã có. Dùng cơ chế subagent/custom agent đúng như
-  [tài liệu Codex](https://learn.chatgpt.com/docs/agent-configuration/subagents) mô tả
-  và như phiên hiện tại thực sự cung cấp.
-- Không áp danh sách vai, đội, wave, model family, effort ladder hay trần luồng toàn
-  cục. Số slot, model và quyền đọc từ phiên; không đoán ID model mới nhất, không ghi đè
-  lựa chọn model toàn máy. `.codex/agents/*.toml` là bề mặt cấu hình của Codex, không
-  phải yêu cầu đội của NNC.
-- Mỗi việc giao có mục tiêu, nguồn, phạm vi được sửa, điều không được đụng, acceptance
-  và giới hạn side effect. Agent chỉ sửa phạm vi được giao; người tích hợp kiểm chứng.
-- Điều phối theo sự kiện: hoàn tất/blocker mở việc phụ thuộc. Còn việc độc lập thì làm;
-  hết thì dùng event wait/yield của host. Không polling, sleep-and-retry hay lịch polling.
-- Không bắt buộc công cụ hỏi riêng của Claude; trình bày cùng hợp đồng quyết định qua
-  giao diện Codex đang dùng.
-
-## Bằng chứng và tài liệu hiện hành
-
-UNKNOWN giữ là UNKNOWN. Đã yêu cầu khác đã chạy; receipt khác outcome; test pass khác sử
-dụng thực tế đạt. Hoàn tất cần bằng chứng mới, phù hợp và không còn việc/blocker chưa đối
-soát. Giữ một báo cáo hiện hành mỗi repo theo quy ước của repo đó; bằng chứng chi tiết ở
-workspace nghiệp vụ. Không tự cấp quyền production, gửi tin, thanh toán hay publish.
+- Trên máy có NNC OSER, đọc Mission bằng `oser status --json`, hoặc công cụ MCP
+  `oser_mission_read` khi đã cấu hình theo
+  [tài liệu tích hợp host](https://github.com/VOSYDUNG/nnc-claude-plugins/blob/main/docs/oser-r1/INTEGRATIONS.md).
+  Không có công cụ OSER thì nói rõ Mission chưa được ghi bền; không giả vờ có checkpoint.
+- Subagent/custom agent dùng đúng như
+  [tài liệu Codex](https://learn.chatgpt.com/docs/agent-configuration/subagents) và phiên
+  hiện tại thực sự cung cấp. `.codex/agents/*.toml` là cấu hình của Codex, không phải
+  yêu cầu đội của NNC.
 
 ## Công cụ đi kèm (tùy chọn, không thuộc kernel)
 

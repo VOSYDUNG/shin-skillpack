@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PLUGIN = "shin-agentic-work"
 SOURCE = Path("codex") / PLUGIN
 UPSTREAM = {
-    "productivity": ("outcome-work-management",),
+    "productivity": ("outcome-work-management", "qa-qc-mission"),
     "product-management": (
         "product-brainstorming", "synthesize-research", "write-spec",
         "sprint-planning", "metrics-review",

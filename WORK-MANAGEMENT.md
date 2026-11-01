@@ -1,6 +1,6 @@
 # Làm việc agentic để tạo kết quả thật
 
-Tài liệu phương thức hiện hành, chưng cất từ Shin Skill Pack và yêu cầu của Shin.
+Tài liệu định hướng cho skill làm việc agentic, chưng cất từ Shin Skill Pack và yêu cầu của Shin.
 Áp dụng có điều chỉnh theo bằng chứng; hiệu quả dài hạn còn cần thử trong thực tế.
 
 ## Kết quả và phương pháp
@@ -51,13 +51,11 @@ kết quả, file/output, kiểm tra thực sự chạy, evidence, giới hạn,
 Agent chỉ đọc trả nội dung để ROOT lưu khi cần; writer sở hữu file rõ; reviewer kiểm độc
 lập sau thay đổi. Không đẩy transcript hoặc toàn bộ log lên ROOT.
 
-Không có đội, vai, model hay trần luồng cố định (NNC OSER R2). Chọn model có thật trong
-phiên; ROOT giữ model người dùng chọn. Giải model, effort, context và quyền theo từng gói. Số agent theo phần việc độc lập và giới hạn thực tế.
-Việc nhỏ hoặc phụ thuộc nối tiếp làm trực tiếp.
-
-Điều phối theo event: giao gói đủ đầu vào, làm phần độc lập, nhận completion/blocker
-rồi kích hoạt bước phụ thuộc. Không loop hoặc polling trạng thái để chờ; khi cần chỉ
-dùng một lần event wait/yield. Timeout không tự kích hoạt vòng chờ mới.
+Phương pháp, Mission, quyền, bằng chứng, delegation native và điều phối theo sự kiện
+(không đội cố định, không polling) nằm ở [NNC OSER](https://github.com/VOSYDUNG/nnc-claude-plugins)
+— xem [tuyên bố chung](https://github.com/VOSYDUNG/nnc-claude-plugins/blob/main/docs/DECLARATION.md);
+tài liệu này không chép lại. Việc nhỏ hoặc phụ thuộc nối tiếp làm trực tiếp. Kích hoạt
+agent khác bằng ID theo giao thức trong skill `shin-agentic-work`.
 
 ## Một tài liệu hiện hành
 
@@ -72,9 +70,10 @@ cần cho kiểm chứng nằm ở kho riêng; không sửa sự thật khi làm
 
 ## Gói sử dụng và thí điểm
 
-`shin-agentic-work` là điểm vào; `outcome-work-management` định hướng kết quả/phương
-pháp; `nnc-ai-oser` đi kèm là cầu nối tới NNC OSER R2 (Mission, quyền, bằng chứng),
-không sinh đội. Tám skill chuyên môn được đóng cùng: brainstorm, research synthesis, spec, sprint, metrics, process,
+Bộ này là skill làm việc agentic cho agent (Claude Code, Codex, Antigravity, host khác).
+`shin-agentic-work` là điểm vào thực thi; `outcome-work-management` định hướng kết quả/phương
+pháp và kế hoạch sau khi có Mission; `qa-qc-mission` chạy QA/QC sơ bộ trước khi khóa
+Mission; `nnc-ai-oser` là con trỏ tới NNC OSER. Tám skill chuyên môn được đóng cùng: brainstorm, research synthesis, spec, sprint, metrics, process,
 risk và runbook. Hướng dẫn: [platforms/codex.md](platforms/codex.md).
 
 Nguồn package ở `codex/shin-agentic-work/`; build lấy thêm skill chuyên môn từ nguồn

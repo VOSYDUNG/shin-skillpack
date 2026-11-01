@@ -1,15 +1,15 @@
 {
   "name": "shin-agentic-work",
-  "version": "0.1.0",
-  "description": "Shape outcomes, choose methods, delegate bounded work through native subagents under NNC OSER R2, and verify results through one current ROOT brief.",
+  "version": "0.2.0",
+  "description": "Agentic work skills for agents: execute real work, QA/QC a Mission before lock, activate other agents by ID and verify handoffs; method and Mission rules link to NNC OSER.",
   "author": {
     "name": "Shin"
   },
   "skills": "./skills/",
   "interface": {
     "displayName": "Shin Agentic Work",
-    "shortDescription": "Goals, native delegation and one current ROOT brief.",
-    "longDescription": "Outcome planning with the NNC OSER R2 method, bounded native delegation, evidence-based verification and clean current documentation.",
+    "shortDescription": "Agentic work skills: execute, QA/QC, hand off, verify.",
+    "longDescription": "Skills for autonomous agents doing real work: read the current source, form Mission acceptance and QC checks, package and delegate bounded work, activate other agents by ID, and verify results. Method, Mission, authority and evidence rules live in NNC OSER and are linked, not restated.",
     "developerName": "Shin",
     "category": "Productivity",
     "capabilities": [],

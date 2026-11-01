@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "shin-agentic-work",
-  "version": "0.1.0",
-  "description": "Outcome planning with the NNC OSER R2 method, bounded native delegation, evidence-based verification and one current ROOT brief.",
+  "version": "0.2.0",
+  "description": "Agentic work skills for agents: execute real work, QA/QC a Mission before lock, activate other agents by ID and verify handoffs; method and Mission rules link to NNC OSER.",
   "author": { "name": "Shin" },
   "repository": "https://github.com/VOSYDUNG/shin-skillpack",
   "keywords": ["planning", "okr", "agents", "work-management"]

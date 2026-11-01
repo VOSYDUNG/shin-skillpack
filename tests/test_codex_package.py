@@ -59,7 +59,7 @@ class CodexPackageTests(unittest.TestCase):
         second = builder.build(self.output)
         self.assertEqual(first, second)
         self.assertEqual(first_zip, Path(first["zip"]).read_bytes())
-        self.assertEqual(first["skills"], 11)
+        self.assertEqual(first["skills"], 12)
         self.assertTrue((package / ".codex-plugin" / "plugin.json").is_file())
         self.assertTrue((package / "plugin.json").is_file())
         self.assertEqual((package / "SHA256SUMS").read_text(encoding="utf-8"), builder._checksums(package))

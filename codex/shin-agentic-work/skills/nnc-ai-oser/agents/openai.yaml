@@ -1,4 +1,4 @@
 interface:
   display_name: "NNC OSER R2 — Codex"
-  short_description: "Mission, bằng chứng và delegation native; không đội cố định"
+  short_description: "Con trỏ tới NNC OSER: Mission, quyền, bằng chứng"
   default_prompt: "Dùng $nnc-ai-oser để đọc Mission hiện hành, chọn thành lập hay xúc tiến và làm bước tiếp theo bằng khả năng native của Codex."

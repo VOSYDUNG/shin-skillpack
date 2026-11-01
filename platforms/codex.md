@@ -1,8 +1,14 @@
 # Shin Agentic Work — Codex và ChatGPT
 
-Plugin kỹ năng thuần, gồm 11 skill: `shin-agentic-work`, `outcome-work-management`,
-`nnc-ai-oser` và 8 phương pháp chuyên môn chọn lọc. Không có MCP server hay connector
-tài khoản. Chỉ mang phương thức; dữ liệu và cấu hình hiện hành nằm tại repo sử dụng.
+Plugin kỹ năng thuần cho agent thực thi việc thật, gồm 12 skill: `shin-agentic-work`,
+`outcome-work-management`, `qa-qc-mission`, `nnc-ai-oser` và 8 phương pháp chuyên môn
+chọn lọc. Không có MCP server hay connector tài khoản. Chỉ mang skill làm việc agentic;
+dữ liệu và cấu hình hiện hành nằm tại repo sử dụng.
+
+Ranh giới lớp: phương pháp, Mission, quyền, bằng chứng, delegation native và điều phối
+theo sự kiện nằm ở [NNC OSER](https://github.com/VOSYDUNG/nnc-claude-plugins)
+([tuyên bố chung](https://github.com/VOSYDUNG/nnc-claude-plugins/blob/main/docs/DECLARATION.md)).
+Gói này dẫn link tới đó, không chép lại.
 
 ## Build
 
@@ -30,9 +36,11 @@ Mở task mới để Codex nạp plugin. Ví dụ:
 Không cần tạo lại mục tiêu đã chốt. Thí điểm hiện tại giới hạn offline; yêu cầu tiếp
 theo phải có phạm vi và quyền tương ứng trước khi chạy runtime.
 
-Skill `nnc-ai-oser` đi kèm là cầu nối mỏng tới phương pháp NNC OSER R2 (thành lập
-Mission, xúc tiến kết quả, kernel giữ trạng thái và bằng chứng). Nó không sinh đội, vai,
-model hay trần luồng; Codex dùng delegation native theo tài liệu hãng. Bộ sinh đội cũ
+Skill `nnc-ai-oser` đi kèm là con trỏ ngắn tới NNC OSER, kèm ghi chú cài/MCP riêng của
+Codex (`oser status --json`, `oser_mission_read`). `qa-qc-mission` lập tiêu chí nghiệm thu
+kèm loại bằng chứng (tương thích `acceptance` của `oser init`), bất biến, phép kiểm QC và
+điều chưa biết trước khi khóa Mission. Giao thức kích hoạt agent khác bằng ID nằm ở
+`shin-agentic-work`; tài liệu khác tham chiếu skill đó thay vì chép. Bộ sinh đội cũ
 `scripts/team.py` đã gỡ ngày 01/11/2026. Khối "NNC AI OSER MANAGED TEAM" còn trong repo
 dự án cần xử lý riêng từng repo.
 
